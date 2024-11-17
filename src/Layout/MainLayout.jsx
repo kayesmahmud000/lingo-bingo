@@ -6,10 +6,10 @@ import Footer from '../Components/Footer';
 const MainLayout = () => {
     return (
         <div >
-            <header className='bg-[#ECE6F6]'>
+            <header className=''>
                 <Header></Header>
             </header>
-            <main className='container mx-auto'>
+            <main className='container min-h-[750px] mx-auto'>
                 <Outlet></Outlet>
             </main>
             <footer className='bg-[#ECE6F6]' >
