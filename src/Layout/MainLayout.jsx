@@ -9,7 +9,7 @@ const MainLayout = () => {
             <header className=''>
                 <Header></Header>
             </header>
-            <main className='container min-h-[750px] mx-auto'>
+            <main className='container  mx-auto'>
                 <Outlet></Outlet>
             </main>
             <footer className='bg-[#ECE6F6]' >
