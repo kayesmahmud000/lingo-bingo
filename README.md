@@ -24,7 +24,7 @@ This project focuses on providing users with a dynamic and engaging platform to 
 
 - **Header**: Includes a welcome message, user login/logout options, and a navigation bar with links to Home, Start Learning, Tutorials, About Us, and My Profile (if logged in).✅
 - **Footer**: Displays contact information, social media links, and a copyright notice.
-- **Main Section**: Displays different pages based on the route.
+- **Main Section**: Displays different pages based on the route.✅
 
 ### Pages
 
@@ -38,9 +38,9 @@ This project focuses on providing users with a dynamic and engaging platform to 
 
 ### JSON Data
 
-The application uses a JSON data array of Turkish vocabulary words with the following structure:
+The application uses a JSON data array of Turkish vocabulary words with the following structure:✅
 
-```json
+<!-- ```json
 [
   {
     "id": "unique_id_1",
@@ -54,22 +54,22 @@ The application uses a JSON data array of Turkish vocabulary words with the foll
     "example": "Merhaba! Nasılsın?"
   },
   ...
-]
+] -->
 ## Authentication System
 
 ### User Login
 
 - **Login Form**: The login page includes a form with fields for Email and Password.✅
 - **Forgot Password**: There is a link to the "Forgot Password" page for users who need to reset their password.
-- **Social Login**: Users can also log in using their Google account through Firebase authentication.
-- **Navigation**: Upon successful login, users are redirected to their desired route or the Home page.✅ If the login fails, an error message is displayed using a toast or an inline error message.
+- **Social Login**: Users can also log in using their Google account through Firebase authentication.✅
+- **Navigation**: Upon successful login, users are redirected to their desired route or the Home page.✅ If the login fails, an error message is displayed using a toast or an inline error message.✅
 
 ### User Registration
 
 - **Registration Form**: The registration page includes a form with fields for Name, Email, Photo URL, and Password.✅
-- **Password Validation**: Passwords must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.
-- **Social Registration**: Users can register using their Google account through Firebase authentication.
-- **Navigation**: Upon successful registration, users are redirected to the Home page.✅ If registration fails, an error message is displayed.
+- **Password Validation**: Passwords must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.✅
+- **Social Registration**: Users can register using their Google account through Firebase authentication.✅
+- **Navigation**: Upon successful registration, users are redirected to the Home page.✅ If registration fails, an error message is displayed.✅
 
 ### Forgot Password
 

@@ -12,6 +12,7 @@ import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
 import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "./PrivateRoute";
+import LessonNoPage from "../Pages/LessonNoPage";
 
   const router = createBrowserRouter([
     {
@@ -24,7 +25,15 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
           path:"/startLearning",
-          element:<PrivateRoute><LearningPage></LearningPage></PrivateRoute>
+          element:<PrivateRoute><LearningPage></LearningPage></PrivateRoute>,
+          loader:()=>fetch('/lesson.json')
+
+        },
+        {
+          path:"/lesson/:lesson",
+          element:<LessonNoPage></LessonNoPage>,
+          loader:()=>fetch('/turkishWord.json')
+
         },
         {
           path:"/tutorials",
