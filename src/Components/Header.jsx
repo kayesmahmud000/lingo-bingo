@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Logo from '../assets/logo_transparent.png'
 import { Link, NavLink } from 'react-router-dom';
 import userImg from '../assets/user.png'
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Header = () => {
+    const {user,logOutUser}=useContext(AuthContext)
     
     return (
         <div className="navbar  container mx-auto py-5 ">
@@ -30,6 +32,9 @@ const Header = () => {
                         <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/startLearning"}>Start-learning</NavLink>
                         <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/tutorials"}>Tutorials</NavLink>
                         <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/aboutUs"}>About-us </NavLink>
+                        {
+                            user&& user?.email ?<NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/myProfile"}>My Profile </NavLink>:""
+                        }
                     </ul>
                 </div>
                 <img className=' w-32 lg:w-60 ' src={Logo} alt="" />
@@ -40,11 +45,19 @@ const Header = () => {
                     <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/startLearning"}>Start-learning</NavLink>
                     <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/tutorials"}>Tutorials</NavLink>
                     <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/aboutUs"}>About-us </NavLink>
+                    {
+                            user&& user?.email ?<NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/myProfile"}>My Profile </NavLink>:""
+                        }
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                <img className='rounded-full'  src={userImg} alt="" />
-                <Link to={"/auth/login"} className="btn bg-[#A020F0] text-white font-semibold text-lg">Login</Link>
+                {user&& user?.email? <p className=' text-xl font-bold'>Welcome {user?.displayName}</p>:""}
+               {
+                user && user?.email ? <img className=' w-10 rounded-full'  src={user.photoURL} alt="" /> : <img className='rounded-full'  src={userImg} alt="" />
+               }
+                {
+                    user&& user?.email? <button onClick={logOutUser} className="btn bg-[#A020F0] text-white font-semibold text-lg">Log Out </button> :<Link to={"/auth/login"} className="btn bg-[#A020F0] text-white font-semibold text-lg">Login</Link>
+                }
             </div>
         </div>
     );

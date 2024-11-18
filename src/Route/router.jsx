@@ -10,6 +10,8 @@ import AboutUsPage from "../Pages/AboutUsPage";
 import AuthLayout from "../Layout/AuthLayout";
 import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
+import MyProfile from "../Pages/MyProfile";
+import PrivateRoute from "./PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -22,7 +24,7 @@ import RegisterPage from "../Pages/RegisterPage";
         },
         {
           path:"/startLearning",
-          element:<LearningPage></LearningPage>
+          element:<PrivateRoute><LearningPage></LearningPage></PrivateRoute>
         },
         {
           path:"/tutorials",
@@ -31,6 +33,10 @@ import RegisterPage from "../Pages/RegisterPage";
         {
           path:"/aboutUs",
           element:<AboutUsPage></AboutUsPage>
+        },
+        {
+          path:"/myProfile",
+          element:<MyProfile></MyProfile>
         }
       ]
     },
@@ -47,7 +53,12 @@ import RegisterPage from "../Pages/RegisterPage";
           element:<RegisterPage></RegisterPage>
         }
       ]
+    },
+    {
+      path:"*",
+      Element:<h1>Error 404</h1>
     }
+    
   ]);
 
 export default router;
