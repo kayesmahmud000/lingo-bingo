@@ -7,7 +7,7 @@ const About = () => {
             <div className="flex flex-col gap-10  lg:flex-row">
                 <img
                     src={AboutImg}
-                    className="max-w-lg h-[300px] rounded-lg shadow-2xl" />
+                    className="lg:max-w-lg lg:h-[300px] rounded-lg shadow-2xl" />
                 <div>
                     <h2 className="text-3xl w-4/6 font-bold">Welcome to Lingo Bingo: Your Gateway to Learning Turkish!</h2>
                     <p className="py-6 w-4/6">
