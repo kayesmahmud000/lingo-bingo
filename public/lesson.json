@@ -2,52 +2,52 @@
     {
         "id": 1,
         "lesson_no": 1,
-        "lesson":"lesson-1"
+        "lesson":"Lesson-1"
 
     },
     {
         "id": 2,
         "lesson_no": 2,
-        "lesson":"lesson-2"
+        "lesson":"Lesson-2"
     },
     {
         "id": 3,
         "lesson_no": 3,
-        "lesson":"lesson-3"
+        "lesson":"Lesson-3"
     },
     {
         "id": 4,
         "lesson_no": 4,
-        "lesson":"lesson-4"
+        "lesson":"Lesson-4"
     },
     {
         "id": 5,
         "lesson_no": 5,
-        "lesson":"lesson-5"
+        "lesson":"Lesson-5"
     },
     {
         "id": 6,
         "lesson_no": 6,
-        "lesson":"lesson-6"
+        "lesson":"Lesson-6"
     },
     {
         "id": 7,
         "lesson_no": 7,
-        "lesson":"lesson-7"
+        "lesson":"Lesson-7"
     },
     {
         "id": 8,
         "lesson_no": 8,
-        "lesson":"lesson-8"
+        "lesson":"Lesson-8"
     },
     {
         "id": 9,
         "lesson_no": 9,
-        "lesson":"lesson-9"
+        "lesson":"Lesson-9"
     },
     {
         "id": 10,
         "lesson_no": 10,
-        "lesson":"lesson-10"
+        "lesson":"Lesson-10"
     }
 ]

@@ -30,7 +30,7 @@ This project focuses on providing users with a dynamic and engaging platform to 
 
 - **Home Page**: Features a banner/slider section, an about section, a success section (using react-count-up for animations), and additional custom sections.✅
 - **Let’s Learn Page**: Contains static cards for each lesson, a tutorial section with an embedded YouTube video, and a “View More” button linking to tutorials.
-- **Lessons/:lesson_no**: Displays vocabulary for the specified lesson number, with colored cards based on difficulty and modals for detailed word information.
+- **Lessons/:lesson_no**: Displays vocabulary for the specified lesson number, with colored cards based on difficulty and modals for detailed word information.✅
 - **Authentication Pages**: Separate login and registration pages with form validation and social login (Google).✅
 - **My Profile**: Shows user information and provides an option to update profile details.
 - **Tutorial Page**: Contains embedded YouTube videos for language learning.

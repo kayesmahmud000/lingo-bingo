@@ -27,7 +27,7 @@ const Header = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-40 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[10] mt-3 w-40 p-2 shadow">
                         <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/"}>Home</NavLink>
                         <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/startLearning"}>Start-learning</NavLink>
                         <NavLink className={({ isActive }) => isActive ? "text-[#A020F0] underline text-lg font-semibold" : "text-lg font-semibold"} to={"/tutorials"}>Tutorials</NavLink>
@@ -51,7 +51,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                {user&& user?.email? <p className=' text-xl font-bold'>Welcome {user?.displayName}</p>:""}
+                {user&& user?.email? <p className=' hidden md:flex text-xl font-bold'>Welcome {user?.displayName}</p>:""}
                {
                 user && user?.email ? <img className=' w-10 rounded-full'  src={user.photoURL} alt="" /> : <img className='rounded-full'  src={userImg} alt="" />
                }

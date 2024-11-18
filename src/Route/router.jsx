@@ -13,6 +13,7 @@ import RegisterPage from "../Pages/RegisterPage";
 import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "./PrivateRoute";
 import LessonNoPage from "../Pages/LessonNoPage";
+import ErrorPage from "../Pages/ErrorPage";
 
   const router = createBrowserRouter([
     {
@@ -65,7 +66,7 @@ import LessonNoPage from "../Pages/LessonNoPage";
     },
     {
       path:"*",
-      Element:<h1>Error 404</h1>
+      errorElementElement:<ErrorPage></ErrorPage>
     }
     
   ]);
