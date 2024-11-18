@@ -36,7 +36,7 @@ const RegisterPage = () => {
             updateProfileUser({displayName:name, photoURL:photo})
             .then(()=>{
                 navigate("/")
-                toast.success("Register Successfully");
+                toast.success(`${user.displayName}, Welcome to Lingo Bingo`);;
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -64,7 +64,7 @@ const RegisterPage = () => {
             setUser(user)
            
             navigate("/")
-            toast.success("Login Successfully");
+            toast.success(`${user.displayName}, Welcome to Lingo Bingo`);
         })
         .catch((error) => {
             const errorCode = error.code;

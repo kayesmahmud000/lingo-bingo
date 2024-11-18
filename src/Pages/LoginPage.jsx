@@ -23,7 +23,7 @@ const LoginPage = () => {
             const user= result.user;
             setUser(user);
             navigate(location?.state ? location?.state : "/")
-            toast.success('Success to login');
+            toast.success(`${user.displayName}, Welcome to Lingo Bingo`);
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -40,7 +40,7 @@ const LoginPage = () => {
             const user=result.user;
             setUser(user)
             navigate(location?.state ? location?.state : "/")
-            toast.success("Login Successfully");
+            toast.success(`${user.displayName}, Welcome to Lingo Bingo`);
         })
         .catch((error) => {
             const errorCode = error.code;
