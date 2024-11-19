@@ -18,7 +18,7 @@ const RegisterPage = () => {
         setErrorMessage("")
 
         if(password.length<6){
-            setErrorMessage('password mast 6 character');
+            setErrorMessage('Password must be at least 6 character');
             return
         }
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{1,}$/;

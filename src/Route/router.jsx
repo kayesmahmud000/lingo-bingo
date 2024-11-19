@@ -32,13 +32,13 @@ import ErrorPage from "../Pages/ErrorPage";
         },
         {
           path:"/lesson/:lesson",
-          element:<LessonNoPage></LessonNoPage>,
+          element:<PrivateRoute><LessonNoPage></LessonNoPage></PrivateRoute>,
           loader:()=>fetch('/turkishWord.json')
 
         },
         {
           path:"/tutorials",
-          element:<Tutorial></Tutorial>
+          element:<PrivateRoute><Tutorial></Tutorial></PrivateRoute>
         },
         {
           path:"/aboutUs",
@@ -46,7 +46,7 @@ import ErrorPage from "../Pages/ErrorPage";
         },
         {
           path:"/myProfile",
-          element:<MyProfile></MyProfile>
+          element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
         }
       ]
     },

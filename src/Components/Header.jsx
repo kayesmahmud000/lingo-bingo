@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Logo from '../assets/logo_transparent.png'
 import { Link, NavLink } from 'react-router-dom';
-import userImg from '../assets/user.png'
+
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Header = () => {
@@ -51,9 +51,9 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                {user&& user?.email? <p className=' hidden md:flex text-xl font-bold'>Welcome {user?.displayName}</p>:""}
+                {user&& user?.email? <p className=' hidden md:flex text-xl font-bold'> {user?.displayName}</p>:""}
                {
-                user && user?.email ? <img className=' w-10 rounded-full'  src={user.photoURL} alt="" /> : <img className='rounded-full'  src={userImg} alt="" />
+                user && user?.email ? <img className=' w-10 rounded-full'  src={user.photoURL} alt="" /> :""
                }
                 {
                     user&& user?.email? <button onClick={logOutUser} className="btn bg-[#A020F0] text-white font-semibold text-lg">Log Out </button> :<Link to={"/auth/login"} className="btn bg-[#A020F0] text-white font-semibold text-lg">Login</Link>
