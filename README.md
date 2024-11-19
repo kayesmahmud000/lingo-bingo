@@ -7,7 +7,7 @@ Lingo Bingo is an interactive language learning application designed to help use
 
 ## Live URL
 
-[Visit Lingo Bingo](https://your-live-url.com)
+[Visit Lingo Bingo](https://lingo-bingo-d09a2.web.app/)
 
 ## Key Features
 
