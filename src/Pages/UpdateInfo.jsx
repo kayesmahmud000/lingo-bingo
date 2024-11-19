@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
 const UpdateInfo = () => {
@@ -14,7 +15,7 @@ const navigate=useNavigate()
         updateProfileUser({displayName:name, photoURL:photo})
             .then(()=>{
                 navigate("/myProfile")
-                
+                toast.success("Information Update Successfully.!");
             })
             .catch((error) => {
                 const errorCode = error.code;
