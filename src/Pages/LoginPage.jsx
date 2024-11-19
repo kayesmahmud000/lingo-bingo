@@ -4,49 +4,51 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast from 'react-hot-toast';
+import { FaEye ,FaEyeSlash } from "react-icons/fa";
 
 
 const LoginPage = () => {
 
-    const {setUser ,loginWithPassword,loginWithGoogle}=useContext(AuthContext);
-    const location=useLocation()
-    const [errorMessage, setErrorMessage]=useState("")
-    const navigate =useNavigate()
-    const handleLoginFrom=(e)=>{
+    const { setUser, loginWithPassword, loginWithGoogle } = useContext(AuthContext);
+    const location = useLocation()
+    const [errorMessage, setErrorMessage] = useState("")
+    const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate()
+    const handleLoginFrom = (e) => {
         e.preventDefault();
 
-        const form=new FormData(e.target);
-        const email =form.get("email");
-        const password=form.get("password")
-        loginWithPassword(email,password)
-        .then(result=>{
-            const user= result.user;
-            setUser(user);
-            navigate(location?.state ? location?.state : "/")
-            toast.success(`${user.displayName}, Welcome to Lingo Bingo`);
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode ,errorMessage)
-            toast.error("Login failed");
-            setErrorMessage(errorMessage)
-          });
+        const form = new FormData(e.target);
+        const email = form.get("email");
+        const password = form.get("password")
+        loginWithPassword(email, password)
+            .then(result => {
+                const user = result.user;
+                setUser(user);
+                navigate(location?.state ? location?.state : "/")
+                toast.success(`${user.displayName}, Welcome to Lingo Bingo`);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // console.log(errorCode ,errorMessage)
+                toast.error("Login failed");
+                setErrorMessage(errorMessage)
+            });
 
     }
-    const handleGoogleLogin=()=>{
+    const handleGoogleLogin = () => {
         loginWithGoogle()
-        .then(result=>{
-            const user=result.user;
-            setUser(user)
-            navigate(location?.state ? location?.state : "/")
-            toast.success(`${user.displayName}, Welcome to Lingo Bingo`);
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode ,errorMessage)
-          });
+            .then(result => {
+                const user = result.user;
+                setUser(user)
+                navigate(location?.state ? location?.state : "/")
+                toast.success(`${user.displayName}, Welcome to Lingo Bingo`);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // console.log(errorCode ,errorMessage)
+            });
     }
     return (
         <div className='min-h-screen flex justify-center items-center'>
@@ -59,23 +61,27 @@ const LoginPage = () => {
                             <span className="label-text text-lg">Email</span>
                         </label>
                         <input type="email"
-                        name='email'
-                        placeholder="email" className="input input-bordered" required />
+                            name='email'
+                            placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-lg">Password</span>
                         </label>
-                        <input type="password"
-                        name='password' placeholder="password" className="input input-bordered" required />
+                        <input type={showPassword ? "text" : "password"}
+                            name='password' placeholder="password" className="input relative input-bordered" required />
+                        {
+                            showPassword? <button onClick={()=>setShowPassword(!showPassword)} className=' absolute right-14 top-6 bottom-0'><FaEyeSlash /></button>:<button onClick={()=>setShowPassword(!showPassword)} className=' absolute right-14 top-6 bottom-0'><FaEye /></button>
+                        }
                         <label className="label">
                             <Link to={"/forgetPassword"} className="label-text-alt  link link-hover">Forgot password?</Link>
                         </label>
-                       {
-                        errorMessage&&  <label className="label">
-                        <span className="label-text  text-red-500 text-sm">{errorMessage}</span>
-                        </label>
-                       }
+                        
+                        {
+                            errorMessage && <label className="label">
+                                <span className="label-text  text-red-500 text-sm">{errorMessage}</span>
+                            </label>
+                        }
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn bg-[#A020F0] text-white font-semibold text-lg">Login</button>
@@ -83,9 +89,9 @@ const LoginPage = () => {
                 </form>
                 <p className='text-center font-semibold '>Don’t Have An Account ? <Link className='text-[#39045A] underline' to={"/auth/register"}> Register</Link></p>
                 <div class="divider px-10 mb-4">OR</div>
-               <div className='flex justify-center'>
-               <button onClick={handleGoogleLogin} className=' btn border border-blue-400 bg-white hover:bg-[#A020F0] hover:text-white  my-5 mb-7'> <FcGoogle /> Continue With Google</button>
-               </div>
+                <div className='flex justify-center'>
+                    <button onClick={handleGoogleLogin} className=' btn border border-blue-400 bg-white hover:bg-[#A020F0] hover:text-white  my-5 mb-7'> <FcGoogle /> Continue With Google</button>
+                </div>
             </div>
         </div>
     );

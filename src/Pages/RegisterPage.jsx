@@ -3,10 +3,12 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast from 'react-hot-toast';
+import { FaEye ,FaEyeSlash } from "react-icons/fa";
 
 const RegisterPage = () => {
     const {setUser ,createNewUser ,loginWithGoogle,  updateProfileUser}=useContext(AuthContext);
     const [errorMessage, setErrorMessage]=useState("")
+    const [showPassword, setShowPassword] = useState(false)
     const navigate=useNavigate()
     const handleRegisterFrom=(e)=>{
         e.preventDefault();
@@ -27,7 +29,7 @@ const RegisterPage = () => {
             setErrorMessage("Must have an Uppercase letter and Must have an Lowercase letter")
             return
         }
-        console.log({name, email, password, photo});
+        // console.log({name, email, password, photo});
         
         createNewUser(email ,password)
         .then(result=>{
@@ -41,7 +43,7 @@ const RegisterPage = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(errorCode ,errorMessage)
+                // console.log(errorCode ,errorMessage)
                
               });
             
@@ -50,7 +52,7 @@ const RegisterPage = () => {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode ,errorMessage)
+            // console.log(errorCode ,errorMessage)
             setErrorMessage(errorMessage)
             toast.error("Register Filed");
           });
@@ -69,7 +71,7 @@ const RegisterPage = () => {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode ,errorMessage)
+            // console.log(errorCode ,errorMessage)
           });
     }
     return (
@@ -111,10 +113,11 @@ const RegisterPage = () => {
                         <label className="label">
                             <span className="label-text text-lg">Password</span>
                         </label>
-                        <input type="password"
-                        name='password'
-                        placeholder="password" 
-                        className="input input-bordered" required />
+                        <input type={showPassword ? "text" : "password"}
+                            name='password' placeholder="password" className="input relative input-bordered" required />
+                        {
+                            showPassword? <button onClick={()=>setShowPassword(!showPassword)} className=' absolute right-14 top-56 bottom-0'><FaEyeSlash /></button>:<button onClick={()=>setShowPassword(!showPassword)} className=' absolute right-14 top-56 bottom-0'><FaEye /></button>
+                        }
                         {
                             errorMessage&& <label className="label">
                             <span className="label-text text-red-500 text-sm">{errorMessage}</span>

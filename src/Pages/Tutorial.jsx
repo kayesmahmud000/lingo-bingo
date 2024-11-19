@@ -11,8 +11,8 @@ const Tutorial = () => {
                 </p>
                 <Link to={'/startLearning'} className="text-2xl my-10 border w-fit hover:bg-[#BFACE2]  border-[#BFACE2] p-1 rounded-full text-start flex items-center gap-2  font-bold"> <FaArrowLeftLong className='bg-[#BFACE2] p-1 rounded-full' /> Learn Vocabularies</Link>
             </div>
-            <div className='grid grid-cols-3 gap-7 my-10'>
-            <div className=' flex justify-center'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-7 my-10'>
+            <div className=' flex  justify-center'>
             <iframe width="560" height="315" className="rounded-lg" src="https://www.youtube.com/embed/vGlEuv2bers?si=JCU4qhqwJ8Pva0Oo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div className=' flex justify-center'>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
     const {user}=useContext(AuthContext);
-    console.log(user)
+    
     return (
         <div className='lg:min-h-[730px]'>
             <div className='max-w-3xl  mx-auto my-10 p-5 py-10 flex flex-col rounded-lg justify-center items-center gap-6 bg-[#BFACE2]'>

@@ -10,7 +10,7 @@ const navigate=useNavigate()
         e.preventDefault();
         const name=e.target.name.value;
         const photo=e.target.photo.value;
-        console.log(name,photo)
+        // console.log(name,photo)
         updateProfileUser({displayName:name, photoURL:photo})
             .then(()=>{
                 navigate("/myProfile")
@@ -19,7 +19,7 @@ const navigate=useNavigate()
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(errorCode ,errorMessage)
+                // console.log(errorCode ,errorMessage)
                
               });
 

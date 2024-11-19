@@ -15,7 +15,7 @@ const LessonNoPage = () => {
             setLessonWord(filterLessonWord)
         }
     }, [allLessons, lesson])
-    console.log
+    // console.log
     
 
     return (

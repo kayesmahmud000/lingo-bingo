@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const LearningPage = () => {
     const lessons=useLoaderData();
-    console.log(lessons)
+    // console.log(lessons)
     return (
         <div className='my-10'>
            <section>

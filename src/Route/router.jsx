@@ -21,6 +21,7 @@ import UpdateInfo from "../Pages/UpdateInfo";
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:"/",
@@ -74,10 +75,10 @@ import UpdateInfo from "../Pages/UpdateInfo";
       path:"/forgetPassword",
       element:<ForgetPasswordRoute></ForgetPasswordRoute>
     },
-    {
-      path:"*",
-      errorElementElement:<ErrorPage></ErrorPage>
-    }
+    // {
+    //   path:"",
+    //   errorElement:<ErrorPage></ErrorPage>
+    // }
     
   ]);
 

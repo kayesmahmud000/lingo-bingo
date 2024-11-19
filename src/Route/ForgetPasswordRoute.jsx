@@ -26,7 +26,7 @@ const ForgetPasswordRoute = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        // console.log(errorCode, errorMessage);
         toast.error("Reset password failed.");
         setErrorMessage(errorMessage);
       });
