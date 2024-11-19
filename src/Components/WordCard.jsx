@@ -13,7 +13,7 @@ const WordCard = ({ word }) => {
     }
     return (
         <div>
-            <div onClick={() => handlePronunciationWord(word.word)} className="card hover:bg-gray-100  bg-[#BFACE2] ">
+            <div onClick={() => handlePronunciationWord(word.word)} className="card h-80 hover:bg-gray-100  bg-[#BFACE2] ">
                 <div className="card-body">
                     <div className='flex gap-3 items-center'>
                         <h2 className="card-title text-2xl font-bold"> Word: {word.word}</h2>
