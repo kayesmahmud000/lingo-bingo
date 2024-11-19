@@ -32,7 +32,7 @@ This project focuses on providing users with a dynamic and engaging platform to 
 - **Let’s Learn Page**: Contains static cards for each lesson, a tutorial section with an embedded YouTube video, and a “View More” button linking to tutorials.✅
 - **Lessons/:lesson_no**: Displays vocabulary for the specified lesson number, with colored cards based on difficulty and modals for detailed word information.✅
 - **Authentication Pages**: Separate login and registration pages with form validation and social login (Google).✅
-- **My Profile**: Shows user information and provides an option to update profile details.
+- **My Profile**: Shows user information and provides an option to update profile details.✅
 - **Tutorial Page**: Contains embedded YouTube videos for language learning.✅
 - **Error Page**: Displays a 404 message for invalid routes.✅
 
@@ -73,15 +73,15 @@ The application uses a JSON data array of Turkish vocabulary words with the foll
 
 ### Forgot Password
 
-- **Reset Form**: The forgot password page includes a form with an email field and a reset password button.
-- **Email Prefill**: If the user navigates from the login page where they already entered their email, the email field is prefilled.
-- **Functionality**: When the reset button is clicked, the user is redirected to their email provider to complete the password reset process.
+- **Reset Form**: The forgot password page includes a form with an email field and a reset password button.✅
+- **Email Prefill**: If the user navigates from the login page where they already entered their email, the email field is prefilled.✅
+- **Functionality**: When the reset button is clicked, the user is redirected to their email provider to complete the password reset process.✅
 
 ### Profile Update
 
-- **Update Form**: The profile update page includes a form with fields for updating the Photo URL and Name.
-- **Update Button**: Clicking the update button saves the changes to the user's profile in Firebase and navigates back to the profile page.
-- **Navigation**: Users can access this page from the "My Profile" section.
+- **Update Form**: The profile update page includes a form with fields for updating the Photo URL and Name.✅
+- **Update Button**: Clicking the update button saves the changes to the user's profile in Firebase and navigates back to the profile page.✅
+- **Navigation**: Users can access this page from the "My Profile" section.✅
 
 ## Challenges
 
@@ -92,13 +92,13 @@ The application uses a JSON data array of Turkish vocabulary words with the foll
 
 ### Forgot Password Feature
 
-- **Form**: The forgot password feature includes a form with an email input field and a reset password button.
-- **Redirect**: Clicking the reset button redirects the user to their email provider for password reset.
+- **Form**: The forgot password feature includes a form with an email input field and a reset password button.✅
+- **Redirect**: Clicking the reset button redirects the user to their email provider for password reset.✅
 
 ### Update Information Feature
 
-- **Profile Update**: Allow users to update their profile information (Photo URL and Name) directly from their profile page.
-- **Firebase Integration**: Ensure the updated information is saved in Firebase and reflected in the user's profile.
+- **Profile Update**: Allow users to update their profile information (Photo URL and Name) directly from their profile page.✅
+- **Firebase Integration**: Ensure the updated information is saved in Firebase and reflected in the user's profile.✅
 
 ### Speak Up Your Vocabularies
 

@@ -14,6 +14,8 @@ import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "./PrivateRoute";
 import LessonNoPage from "../Pages/LessonNoPage";
 import ErrorPage from "../Pages/ErrorPage";
+import ForgetPasswordRoute from "./ForgetPasswordRoute";
+import UpdateInfo from "../Pages/UpdateInfo";
 
   const router = createBrowserRouter([
     {
@@ -47,6 +49,10 @@ import ErrorPage from "../Pages/ErrorPage";
         {
           path:"/myProfile",
           element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
+        },
+        {
+          path:"/updateInfo",
+          element:<UpdateInfo></UpdateInfo>
         }
       ]
     },
@@ -63,6 +69,10 @@ import ErrorPage from "../Pages/ErrorPage";
           element:<RegisterPage></RegisterPage>
         }
       ]
+    },
+    {
+      path:"/forgetPassword",
+      element:<ForgetPasswordRoute></ForgetPasswordRoute>
     },
     {
       path:"*",

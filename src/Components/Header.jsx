@@ -53,7 +53,7 @@ const Header = () => {
             <div className="navbar-end gap-4">
                 {user&& user?.email? <p className=' hidden md:flex text-xl font-bold'> {user?.displayName}</p>:""}
                {
-                user && user?.email ? <img className=' w-10 rounded-full'  src={user.photoURL} alt="" /> :""
+                user && user?.email ? <img className=' w-10 h-10 object-cover rounded-full'  src={user.photoURL} alt="" /> :""
                }
                 {
                     user&& user?.email? <button onClick={logOutUser} className="btn bg-[#A020F0] text-white font-semibold text-lg">Log Out </button> :<Link to={"/auth/login"} className="btn bg-[#A020F0] text-white font-semibold text-lg">Login</Link>
