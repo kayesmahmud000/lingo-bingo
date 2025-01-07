@@ -81,11 +81,11 @@ git clone https://github.com/kayesmahmud000/lingo-bingo
 cd navi-visa
 
 # Install the dependencies
-npm install
+`npm install`
 
 # Run the development server
-npm run dev
----
+`npm run dev`
+
 
 
 
