@@ -75,7 +75,7 @@ Lingo Bingo is an interactive language learning application designed to help use
 - **recharts**: ^2.15.0
 
 # Clone the repository
-git clone https://github.com/username/navi-visa.git
+git clone https://github.com/kayesmahmud000/lingo-bingo
 
 # Navigate into the project directory
 cd navi-visa
