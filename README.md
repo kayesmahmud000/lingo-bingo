@@ -19,7 +19,7 @@ Lingo Bingo is an interactive language learning application designed to help use
 - **Responsive Design**: Access the platform on any device, whether it's a desktop, tablet, or mobile phone.
 - **Password Reset**: Easy password recovery process with email notifications.
 ## Main Tecnology
-- **Frontend**: Next.js, React.js, Tailwind CSS
+- **Frontend**: React.js, Tailwind CSS
 
 - **Backend**: Node.js, Express.js
 
