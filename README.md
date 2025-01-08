@@ -78,7 +78,8 @@ Lingo Bingo is an interactive language learning application designed to help use
 git clone https://github.com/kayesmahmud000/lingo-bingo
 
 # Navigate into the project directory
-cd navi-visa
+cd lingo-bingo
+
 
 # Install the dependencies
 `npm install`
